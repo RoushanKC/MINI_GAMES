@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top left, #8ee4af 0%, #edf5e1 100%);
+
+}
+
+main {
+    position: relative;
+    height: 60rem;
+    width: 100rem;
+    background-color: rgba(0, 0, 0, 0.26);
+    display: flex;
+    border-radius: 9px;
+    box-shadow: 2rem 3rem 5rem rgba(0, 0, 0, 0.86);
+    overflow: auto;
+    backdrop-filter: blur(200px);
+    filter: blur();
+
+}
+
+.player {
+    flex: 50%;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem;
+    display: flex;
+
+}
+
+.name {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 300;
+
+}
+
+.score {
+    font-size: 8rem;
+    font-weight: 300;
+    margin-bottom: auto;
+    color: #379686;
+}
+
+.player-active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.player-active .name {
+    font-weight: 600;
+}
+
+.player-active .score {
+    font-weight: 400;
+}
+
+.player-active .current {
+    opacity: 1;
+}
+
+.current {
+    background-color: #379686;
+    color: black;
+    border-radius: 6px;
+    opacity: 0.5;
+    width: 65%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.current-label {
+    font-size: 1.7rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.current-score {
+    font-size: 3.5rem;
+}
+
+.btn {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    font-family: inherit;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 300;
+    border-radius: 5px;
+    padding: 0.7rem 2.5rem;
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 1rem 1.5rem 3.5rem rgba(0, 0, 0, 0.86);
+
+}
+
+.new {
+    top: 4rem;
+}
+
+.btn-roll {
+    top: 39rem;
+}
+
+.btn-hold {
+    top: 46rem;
+}
+
+.btn:active {
+    transform: translate(-50% 6px);
+    box-shadow: 1rem 1rem 3.5rem rgba(0, 0, 0, 0.86);
+}
+
+.btn:focus {
+    outline: none
+}
+
+.dice {
+    position: absolute;
+    top: 16.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10rem;
+    box-shadow: 0rem 1rem 3rem rgba(0, 0, 0, 0.6);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.player-winner {
+    background-color: #5cdb95;
+}
